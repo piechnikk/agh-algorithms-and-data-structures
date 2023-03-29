@@ -1,6 +1,6 @@
-# zad1testy.py
+# zad2testy.py
 from testy import *
-from zad1test_spec import ALLOWED_TIME, TEST_SPEC, gentest
+from zad2test_spec import ALLOWED_TIME, TEST_SPEC, gentest
 
 from copy import deepcopy
 
@@ -10,11 +10,11 @@ def copyarg( arg ):
 
 
 def printarg(*arg):
-    print(f's = {limit(arg[0])}')
+    print(f'S = {limit(arg[0])}')
 
 
 def printhint( hint ):
-    print("Poprawny wynik : ", limit(hint))
+    print("Poprawny wynik: ", limit(hint))
 
 
 def printsol( sol ):
@@ -28,11 +28,10 @@ def check( hint, sol ):
 def generate_tests(num_tests = None):
     global TEST_SPEC
     TESTS = []
-    
-    s = "akontnoknonabcddcba"
+
     newtest = {}
-    newtest["arg"] = [s]
-    newtest["hint"] = 7
+    newtest["arg"] = [[1,7,3,4,1]]
+    newtest["hint"] = 11
     TESTS.append(newtest)
 
     if num_tests is not None:

@@ -1,0 +1,8 @@
+1. struktura danych insert, remove/min/max w O(logn)
+2. algorytm znajdowania k-tego co do wielkości elementów tablicy nieposortowanej
+3. napisać algorytm sortujący n elementową tablicę liczb z zakresu 0...n^2
+4. Posortować tablicę długości n która psiada log n różnych elementów
+5. sprawdzić czu słowa a i b są anagramami
+    a. a-z
+    b. unicode
+6. tablica parami różnych liczb znaleźć liczby x i y z A takie, że różnica x-y jest największa i że nie istnieje liczba k (należąca do A)

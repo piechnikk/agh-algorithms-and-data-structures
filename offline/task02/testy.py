@@ -3,14 +3,12 @@
 
 import sys
 
-sys.setrecursionlimit(1000000)
-
-TIMER = False
-RERAISE = True
-PRINT_STATUS = False
+TIMER = True
+RERAISE = False
+PRINT_STATUS = True
 USE_STORED_TESTS = False
 SAVE_TESTS = False
-FORCE_ALL_TESTS = False
+FORCE_ALL_TESTS = True
 
 
 if TIMER:
