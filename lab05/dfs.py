@@ -12,13 +12,14 @@ def get_neighbours(G: Graph, v: int) -> list[int]:
     return neighbours
 
 
-def dfs(G):
+def dfs(G: Graph):
     """DFS
 
     Searches a tree structure in a graph and returns time from s to each vertex and parent of each vertex.
     """
 
-    def dfs_visit(G, u):
+    def dfs_visit(G: Graph, u: int) -> None:
+        """Handling subsequent vertices for the dfs algorithm"""
         nonlocal time
         time += 1
         visited[u] = True
