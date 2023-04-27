@@ -3,27 +3,22 @@
   reverses direction of each edge 
   runs dfs choosing starting verticies in descending order of time processing (vertices visited in each run of dfs_visit create connected component)
 
-2.finding bridge
-  runs dfs, for each v saves his meeting time d(v)
-  for each vertex v calculate low(v) = min(d(v),min(d(u)), min(low(w))) [v is reverse edge for u, w is v's child in dfs tree]
-  bridges are edges {v,p(v)} [p(v) is parent in dfs tree] such that d(v) = low(v)1. 
 
 tasks on lab:
-3.find hamilton path in directed acyclic graph
+1.find hamilton path in directed acyclic graph
   sorts topologically and if it can go from the first vertex to the last then in graph is hamilton path
 
-4.2cnf = two conjunctive normal form
+2.2cnf = two conjunctive normal form
   example: (~p or ~q) and (~r or s) and (~s or q) <=> (p=>~q)and(r=>s)and(s=>q)and(q=>~p)and(~s=>~r)and(~q=>~s)
   converts the implication into an edge of the directed graph, removes the strongly coherent components, sorts topologically and goes from the beginning checking if it will work for 1 if it doesn't then removes first vertex ( because there must be 0 there since it doesn't work for 1) and continues the same way (1 to the first vertex and if the rest works)
 
-5.good start
+3.good start
   given a directed graph, a particular vertex is a good start if all vertices are reachable from this vertex 
   takes this vertex what is topologically first (must be one) and goes through all via a path 
 
-6.A to B
+4.A to B
   A tour guide wants to transport k students between A and B. Between these cities there is a road network given (a - first city,b - second city,c - bus capacity) find the smallest possible number of buses
   takes the largest capacity of the bus, divides it in half and checks if it can reach B with dfs algorithm if for half it will not be possible then again in half and so on to the end of the world
 
 Homework
-- an algorithm that finds bridges in a graph
 we say that a vertex is a universal outlet in a graph if from every vertex there is an edge to the outlet and from the outlet there is no edge to any other
