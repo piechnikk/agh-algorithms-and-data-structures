@@ -1,0 +1,30 @@
+# https://replit.com/@kzzzf/ASD23r2
+# https://replit.com/join/xbzjhivfzh-kzzzf
+1. 
+    Zaimplementować algorytm djikstry
+
+2. 
+    najkrótsze ścieżki z jednego źródła w dagu z wagami
+
+3. 
+    odtworzenie najkrótszej ścieżki ze źródła s do t
+
+4.
+    G=(V,E) krawędzie mają wagi ze zbioru {1,2,...,|E|} parami różne
+    mamy x i y należące do V, znaleźć ścieżkę x->y o najmniejszej sumie wag i o malejących wagach
+
+5. 
+    wymiana walut K[n][n] - tablica zawierająca kursy walut
+    zarabianie hajsu
+
+6. najlepszy korzeń
+    acykliczny spójny ważony nieskierowany graf T
+    znaleźć taki wierzchołek w którym odległość od najdalszego jest możliwie najmniejsza
+
+7. Podróżnik (stacje benzynowe)
+    krawędzi mają długości w km, w każdym wierzchołku jest stacja z "ci"-cena zalitr paliwa, D - pojemność baku, wiemy że pali 1l na 1 km
+
+8. Graf ma połączenia między miastami, krawędzie mają wagi. Mamy 2 kierowców (Alicja i Bob), co miasto się zmieniają
+    Alicja planuje trase i ustala kto prowadzi pierwszy. Alicja chce prowadzić jak najmniej kilometrów.
+    
+    bierzemy graf połączeń, mamy wierzchołek a, b startowy końcowy. będziemy rozmanażać wierzchołki (będziemy kopiować graf i rozpatrujemy na 2 grafach (graf alicji i graf boba)) z punktu widzenia alicji bob jeździ za darmo. Trzeba poprzepinać krawędzie. alicja jedzie do grafu boba a bob do grafu alicji.  mamy 2 wierzchołki końcowe i sprawdzamy który będzie lepszy. 
