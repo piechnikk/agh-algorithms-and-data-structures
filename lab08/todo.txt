@@ -1,0 +1,4 @@
+4. transport atomowy, mamy graf pełny ważony i dla każdej krawędzi (x,y to najkrótsza ścieżka z x do y) mamy wierzchołek s i wierzchołek t, mamy wyznaczoną liczbę d, któ©a jest większa niż waga krawędzi s,t mamy jednego technika atomowego, który będzie transportował transport z s do t i mamy 2 technika transportującego z t do s. Przemieszczają się w każdym ruchu o 1 krawędź (wierzchołek symbolizuje nam ścieżke). Nie mogą się zbliżyć na mniej niż d. Trzeba sprawdzić czy da się przewieźć te transporty.
+
+5.  Podróżnik (stacje benzynowe) krawędzi mają długości w km, w każdym wierzchołku jest stacja z "ci"-cena zalitr paliwa, D - pojemność baku, wiemy że pali 1l na 1 km, mamy s-początek, t-koniec.
+tworzymy sobie kopie grafu (razem d grafów) i łączymy ścieżki potem szukamy z s,0 do t,0
