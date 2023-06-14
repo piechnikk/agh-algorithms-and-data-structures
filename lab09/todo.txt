@@ -1,1 +1,0 @@
-grab nieskierowany i nieważony ile trzeba usunąć krawędzi żeby graf się rozspójnił
