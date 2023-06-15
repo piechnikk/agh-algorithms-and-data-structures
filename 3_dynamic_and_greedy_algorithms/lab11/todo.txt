@@ -1,0 +1,16 @@
+1. czarny las
+nie można ściąć dwóch sąsiadów
+
+2. głodna żaba
+skacze po polach (0 do n-1)
+ai - wartość przekąski dla żaby
+skok kosztuje ją ilość przeskoczonych pól
+jaka jest minimalna ilość skoków żeby doskoczyła do ostatniego pola
+
+3. 2d problem plecakowy
+przedmioty {p1,...,pn}
+pi = (vi, wi, hi)
+złodziej jest ograniczony przez w-waga, oraz h - maksymalna wysokość
+
+4. Ścieżka w drzewie
+dane drzewo ukorzenione T każdy wierzchołek w tym drzewie ma jakąś wartość ta wartość może być ujemna chcemy teraz znaleźć ścieżkę o max sumie wartości 
