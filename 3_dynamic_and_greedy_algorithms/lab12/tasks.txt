@@ -1,0 +1,31 @@
+1. chcemy wyznaczyś stacje w których tankujemy mamy ograniczony bak
+jedziemy ile się da, jak nam zabraknie paliwa to tankujemy do pełna na ostatniej miniętej stacji
+zawsze tankujemy do pełna bo daje nam to najdłuższy dystans - najdalej dojedziemy (rozwiązanie ma ten sam koszt bo patrzymy tylko na ilośc tankowań) weźmy pod uwagę optymalne rozwiązanie załóżmy że optymalnym jest zatankowanie do połowy to gdy zatankuje do pełna to nie ogranicza mi to możliwości, a gdy zatankuje na kolejnej stacji niż rozwiązanie optymalne to również nie wpływa to
+
+2. wyznaczamy stacje tak, żeby koszt przejazdu był minimalny (każda stacja ma dodatkowo cenę za litr paliwa) na każdej stacji można zatankować dowolną ilość paliwa ale nie więcej niż L (pojemność zbiornika)
+jesteśmy w jakiejś stacji i mamy x paliwa w baku, patrzymy na zasięg x i jeśli tam jest jakaś tańsza stacja to nie tankuje nic, jeśli nie ma to sprawdzam w odległości l czy jest jakaś tańsza stacja, jeśli jest to tankuje w obecnej tyle żeby do niej dojechać a jeśli nie ma to tankuje do maksa i patrze na kolejną stację.
+
+3. zadanie jw. ale jak się zatrzymamy na stacji to musimy tankować do pełna
+na początku trzeba zatankować do pełna
+algo dynamiczny
+funkcja f(i, k) - minimalny koszt dojazdu do stacji i tak by w baku zostało k litrów paliwa (przed zatankowaniem)
+f(0, 0) = 0
+f(0, k) = inf, k>0
+f(i, k) = min(f(i-1, k + d(i-1, i)), min_z(f(i-1, z) + (L-z)*c[i-1],L>=z>=0, d(i-1, i)=L-k))
+
+f(i) - najmniejszy koszt dojechania do pola i oraz zatankowania w nim
+
+
+z2
+Dany jest zbiór punktów X = {x1,...,xn} na prostej. Proszę podać algorytm, który znajduje minimalną liczbę przedziałów jednostkowych domkniętych, potrzebnych do pokrycia wszystkich punktów z X. (Przykład: Jeśli X = {0.25, 0.5, 1.6} to potrzeba dwóch przedziałów, np. [0.2,1.2] oraz [1.4,2.4]).
+
+bierzemy zachłannie od pierwszego punktu i tam wstawiamy początek odcinka i rozpatrujemy mniejszy problem bez punktów które pokrył odcinek
+
+z3
+Mamy dany zbiór zadań T = {t1, . . . , tn}. Każde zadanie ti dodatkowo posiada: (a) termin wykonania d(ti) (liczba naturalna) oraz (b) zysk g(ti) za wykonanie w terminie (liczba naturalna). Wykonanie każdego zadania trwa jednostkę czasu. Jeśli zadanie ti zostanie wykonane przed przekroczeniem swojego terminu d(ti), to dostajemy za nie nagrodę g(ti) (pierwsze wybrane zadanie jest wykonywane w chwili 0, drugie wybrane zadanie w chwili 1, trzecie w chwili 2, itd.). Proszę podać algorytm, który znajduje podzbiór zadań, które można wykonać w terminie i który prowadzi do maksymalnego zysku. Proszę uzasadnić poprawność algorytmu.
+
+
+
+
+
+
