@@ -20,7 +20,8 @@ def change(T, C):
             return float("inf")
         if coins[T]!=float("inf"):
             return coins[T]
-        return min(f(T-C[i])+1 for i in range(n))
+        coins[T] = min(f(T-C[i])+1 for i in range(n))
+        return coins[T]
     return f(T)
 
 C = [1,5,8]
