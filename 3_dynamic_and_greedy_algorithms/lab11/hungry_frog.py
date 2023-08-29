@@ -1,14 +1,27 @@
 def hungry_frog(T):
-    ln = len(T)
-    to_end = [float('inf') for _ in range(ln)]
-    to_end[ln -1] = 0
-    
-    for i in range (ln-2, -1, -1):
-        for j in range(T[i], 0, -1):
-            if i+j < ln  and  to_end[i+j] + 1 < to_end[i]:
-                to_end[i] = to_end[i+j] +1
+    n = len(T)
+    passed_snacks = []
+    energy = T[0]
+    answer = 1
+    for i in range(1,n-1):
+        # when it is not possible to reach the end
+        if energy == 0:
+            return float("inf")
 
-    return to_end[0]
+        # cost of moving one field
+        energy -= 1
+
+        # when there is any snack in the field add it to the passed_snacks array
+        if T[i]>0:
+            passed_snacks.append(T[i])
+        
+        # when there is no energy in our frog give it the largest passed snack and save how many snacks it ate
+        if energy == 0:
+            passed_snacks.sort()
+            energy += passed_snacks.pop()
+            answer+=1
+        
+    return answer
 
 
 
@@ -34,3 +47,4 @@ def frog(i, energy, C):
 lilypads = [5, 5, 0, 0, 0, 0, 0, 0, 0, 0]
 
 print(frog(0, lilypads[0], lilypads))
+print(hungry_frog(lilypads))
