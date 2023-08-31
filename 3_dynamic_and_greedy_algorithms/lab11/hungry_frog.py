@@ -63,4 +63,3 @@ lilypads = [5, 5, 0, 0, 0, 0, 0, 0, 0, 0]
 print(frog(0, lilypads[0], lilypads))
 print(hungry_frog(lilypads))
 print(hungry_frog_square([1,5,1,3]))
-print(hungry_frog_square_recursive([1,5,1,3]))
