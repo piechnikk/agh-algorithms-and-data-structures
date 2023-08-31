@@ -23,6 +23,20 @@ def hungry_frog(T):
         
     return answer
 
+# cost of jump is length^2
+# f(i, a) = minimal jumps to i field with a energy after
+# f(0, a) = 0
+# f(i, a) = min(f(j,a-(i-j)+T[j])+1 for j in range(i))
+def hungry_frog_square(T):
+    n = len(T)
+    sumA = sum(T)
+    answers = [[float("inf")] * (sumA+1) for i in range(n)]
+    for j in range(T[0]+1):
+        answers[0][j] = 0
+    for i in range(1,n):
+        for a in range(sumA):
+            answers[i][a] = min(answers[j][a+(i-j)**2-T[j]]+1 if a+(i-j)**2-T[j] >= 0 and a+(i-j)**2-T[j] <=sumA else float("inf") for j in range(i))
+    return min(answers[n-1])
 
 
 DP = dict()
@@ -48,3 +62,5 @@ lilypads = [5, 5, 0, 0, 0, 0, 0, 0, 0, 0]
 
 print(frog(0, lilypads[0], lilypads))
 print(hungry_frog(lilypads))
+print(hungry_frog_square([1,5,1,3]))
+print(hungry_frog_square_recursive([1,5,1,3]))
