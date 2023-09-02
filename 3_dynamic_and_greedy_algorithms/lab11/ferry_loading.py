@@ -23,3 +23,33 @@ def ferry(C, L):
     return f(n-1, L, L)
             
 print(ferry([1,1,1,2,3,4,5,6,7], 5))
+
+# cars enter the ferry in order as in the array
+def ferry_in_order(CARS, L):
+    C = CARS[::-1]
+    n = len(C)
+    answers = [[[None] * (L+1) for t in range(L+1)] for i in range(n)]
+
+    def f(i, t, b):
+        if t < 0 or b < 0:
+            return 0
+        
+        if answers[i][t][b] != None:
+            return answers[i][t][b]
+        
+        if i==0:
+            answers[i][t][b] = 0
+            if C[i] <= t or C[i] <= b:
+                answers[i][t][b] = 1
+            return answers[i][t][b]
+        
+        if C[i] > t and C[i] > b:
+            answers[i][t][b] = 0
+            return answers[i][t][b]
+        
+        answers[i][t][b] = max(f(i-1, t-C[i], b)+1 , f(i-1, t, b-C[i])+1)
+        return answers[i][t][b]
+    
+    return f(n-1, L, L)
+            
+print(ferry_in_order([1,1,1,2,3,4,5,6,7], 5))
